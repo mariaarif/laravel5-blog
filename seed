@@ -1,0 +1,8 @@
+Rolled back: 2015_10_21_052610_create_categories_table
+Rolled back: 2015_10_21_023653_create_posts_table
+Rolled back: 2014_10_12_100000_create_password_resets_table
+Rolled back: 2014_10_12_000000_create_users_table
+Migrated: 2014_10_12_000000_create_users_table
+Migrated: 2014_10_12_100000_create_password_resets_table
+Migrated: 2015_10_21_023653_create_posts_table
+Migrated: 2015_10_21_052610_create_categories_table

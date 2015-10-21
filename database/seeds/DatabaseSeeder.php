@@ -15,6 +15,21 @@ class DatabaseSeeder extends Seeder
         Model::unguard();
 
         // $this->call(UserTableSeeder::class);
+        App\Category::create(['title'=>'Public']);
+        App\Category::create(['title'=>'Private']);
+        App\Category::create(['title'=>'Family']);
+
+        $faker = Faker\Factory::create();
+
+        foreach(range(1,100) as $index) {
+
+            
+            App\Post::create([
+                'title'=>$faker->realText(30,2),
+                'content'=>$faker->realText(200,2),
+                'category_id'=>App\Category::all()->random()->id 
+                ]);
+        }
 
         Model::reguard();
     }
