@@ -12,7 +12,7 @@
 
 	<tbody>
 		
-		@foreach (App\Post::all() as $post)
+		@foreach ($posts as $post)
 
 		<tr>
 			<td><a href="/posts/{{ $post->id}}">{{ $post->title }}</a></td>
