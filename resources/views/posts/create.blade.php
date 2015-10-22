@@ -6,6 +6,9 @@
 
 
 {!! Form::open(['route' => 'posts.store']) !!}
+
+	@include('errors._validation')
+
 	<div class="form-group">
 			
 	{!! Form::label('title', 'Post Title') !!}
