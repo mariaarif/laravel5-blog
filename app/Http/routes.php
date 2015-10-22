@@ -75,6 +75,7 @@ Route::get('posts', function() {
 
 
 Route::resource('posts', 'PostsController');
+Route::resource('categories', 'CategoriesController');
 
 
 
