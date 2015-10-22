@@ -71,7 +71,8 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = \App\Post::find($id);
+        return view('posts.edit', compact('post'));
     }
 
     /**
@@ -82,8 +83,22 @@ class PostsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
-    {
-        //
+    {   
+
+        $this->validate($request, [
+            'title' => 'required|max:255',
+            'content' => 'required',
+            'category_id' => 'required'
+            ], [
+
+            'title.required' => 'Please type Blog Title'
+            ]);
+
+        
+        $post = \App\Post::find($id);
+        $post->update($request->all());
+
+        return redirect()->route('posts.index');
     }
 
     /**

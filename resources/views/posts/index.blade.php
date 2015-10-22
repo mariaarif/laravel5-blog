@@ -18,6 +18,10 @@
 			<td><a href="/posts/{{ $post->id}}">{{ $post->title }}</a></td>
 			<td>{{ str_limit($post->content, 20)}}</td>
 			<td>{{ $post->category->title}}</td>
+
+			<td><a href="{{ route('posts.edit', ['posts'=>$post->id])}}">Edit</a></td>
+
+
 		</tr>
 
 		@endforeach
