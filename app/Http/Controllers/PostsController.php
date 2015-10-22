@@ -94,7 +94,7 @@ class PostsController extends Controller
             'title.required' => 'Please type Blog Title'
             ]);
 
-        
+
         $post = \App\Post::find($id);
         $post->update($request->all());
 
@@ -109,6 +109,8 @@ class PostsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $post = \App\Post::find($id);
+        $post->delete();
+        return redirect()->route('posts.index');
     }
 }
