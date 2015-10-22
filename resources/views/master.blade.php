@@ -21,17 +21,7 @@
     
     <div class="container">
 
-     <div class ="navbar">
-
-      <a class="navbar-brand" href="#">Blog App</a>
-
-      <ul class="nav navbar-nav">
-
-        <li>
-          <a href="/posts">Posts></a>
-        </li>
-       </ul>
-      </div>
+      @include('_navigation')     
 
       @yield('content')  
      </div> 

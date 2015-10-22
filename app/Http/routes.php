@@ -68,13 +68,13 @@ Route::get('posts', function() {
 
 
 
-Route::get('posts', 'PostsController@index');
+//Route::get('posts', 'PostsController@index');
 
 
-Route::get('posts/{id}', 'PostsController@show');
+//Route::get('posts/{id}', 'PostsController@show');
 
 
-
+Route::resource('posts', 'PostsController');
 
 
 
